@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import BudgetView from '../views/BudgetView.vue'
 import CategoryView from '../views/CategoryView.vue'
 import ExpensesView from '../views/ExpensesView.vue'
+import EditCategoryView from '../views/EditCategoryView.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/category',
     name: 'category',
     component: CategoryView
+  },
+  {
+    path: '/category/:id',
+    name: 'editCategory',
+    component: EditCategoryView
   },
   {
     path: '/about',

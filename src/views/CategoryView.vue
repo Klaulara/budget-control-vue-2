@@ -29,21 +29,12 @@ export default {
         .post("http://localhost:3000/api/v1/category", category)
         .then((response) => {
           console.log(response);
+          this.$router.go();
         })
         .catch((error) => {
           console.log(error);
         });
     },
-    async editCategory(id, category){
-      await axios
-        .put(`http://localhost:3000/api/v1/category/${id}`, category)
-        .then((response) => {
-          console.log(response);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
-    }
   },
 };
 </script>

@@ -19,7 +19,6 @@
 </template>
 
 <script>
-import router from '@/router';
 
 export default {
   name: "NewBudget",
@@ -39,7 +38,6 @@ export default {
       });
       this.name = null;
       this.value = null;
-      router.push({ path: "/budget" });
     },
   },
 };

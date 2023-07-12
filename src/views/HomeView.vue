@@ -9,6 +9,7 @@
 <script>
 import axios from 'axios';
 import NewBudget from '@/components/NewBudget.vue';
+import router from '@/router';
 
 export default {
   name: 'HomeView',
@@ -20,6 +21,7 @@ export default {
       await axios.post('http://localhost:3000/api/v1/budget', budget)
         .then((response) => {
           console.log(response);
+          router.push({ path: "/budget" });
         })
         .catch((error) => {
           console.log(error);
